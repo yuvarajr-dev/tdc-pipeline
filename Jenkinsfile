@@ -62,10 +62,10 @@ pipeline {
         }
 
         stage("SonarQube analysis") {
-            steps {
-                dir("sonar") {
-                    unstash 'it'
-                    withSonarQubeEnv('sonar') {
+            //steps {
+            //    dir("sonar") {
+            //       unstash 'it'
+            //        withSonarQubeEnv('SonarQube') {
                         sh 'mvn sonar:sonar'
                     }
                 }
